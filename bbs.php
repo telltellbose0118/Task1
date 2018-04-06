@@ -59,20 +59,32 @@
     		<meta name = "icon" src = "">
     		<link rel = "stylesheet" type = "text/css" href = "base.css">
     		<script type = "text/javascript" src = "base.js"></script>
-    		<script type = "text/javascript">
+    		<script type = "text/javascript" >
     		</script>
     	</head>
     	<body>
 
     		<!-- login form -->
     		<?php if(!$login){?>
+
+    		<!-- background-animation -->
+
+    		<div class = "ball red"></div>
+    		<div class = "ball yellow"></div>
+    		<div class = "ball orange"></div>
+    		<div class = "ball blue"></div>
+
+    		<!-- background-animation -->
+
     		<div id = "login">
-    		    <h1>Bulletin Board</h1><br><br>
+    		    <h1>Bulletin &nbsp;Board</h1>
     		    <form action = "bbs.php" method = "post">
+    		    <fieldset>
     		    	<p>ユーザー名  ：<input type = "text" name= "user_name" value = "<?=$user?>" required>
-    		    	<p>パスワード  ：<input type = "password" name = "password" value = "" required><br>
-    		    	<input type = "submit" value = "login">
+    		    	<p>パスワード  ：<input type = "password" name = "password" value = "" required><br><br>
+    		    	<input type = "submit" value = "login">&nbsp;&nbsp;
     				<input type = "reset" value = "clear">
+    			</fieldset>
     		    </form>
 
     		<!-- login error report -->
@@ -83,6 +95,22 @@
 
     		</div>
     		<!-- login form -->
+
+            <!-- animation JavaScript -->
+
+			<script type="text/javascript">
+    			var red = document.getElementsByClassName("red")[0];
+    			var yellow = document.getElementsByClassName("yellow")[0];
+    			var orange = document.getElementsByClassName("orange")[0];
+    			var blue = document.getElementsByClassName("blue")[0];
+    			console.log(red);
+    			animate_ball(red);
+    			animate_ball(yellow);
+    			animate_ball(orange);
+    			animate_ball(blue);
+			</script>
+
+			<!-- animation JavaScript -->
 
     		<!-- bbs main page -->
     		<?php }else{?>
@@ -130,6 +158,5 @@
     			<?php }?>
     		</div>
     		<!-- bbs main page -->
-
         </body>
     </html>

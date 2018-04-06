@@ -13,3 +13,72 @@ body{
 div .error{
 	color:red;x
 }
+div.ball{
+	position:absolute;
+	z-index:-1;
+}
+div.red{
+	top: 75px;
+	left: 75px;
+	width: 180px;
+	height: 180px;
+	border-radius: 90px;
+	background-color: red;
+}
+div.yellow{
+	top: 400px;
+	left: 200px;
+	width: 140px;
+	height: 140px;
+	border-radius: 70px;
+	background-color: yellow;
+}
+div.orange{
+	top: 400px;
+	left: 600px;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	background-color: orange;
+}
+div.blue{
+	top: 100px;
+	left: 650px;
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+	background-color: blue;
+}
+div#login h1{
+	margin:75px auto;
+	border-bottom: 1px solid black;
+	width: 485px;
+	height: 75px;
+	font-size: 3.5rem;
+}
+div#login form{
+	margin:25px auto;
+	padding-top: 10px;
+}
+div#login fieldset{
+	width:	350px;
+	height: 150px;
+	margin: 25px auto;
+	background-color:rgba(255,255,255,0.5);
+}
+input[type = "text"],input[type = "password"]{
+	font-weight:bold;
+}
+input[type = "submit"],input[type = "reset"]{
+	font-weight: bold;
+	font-size: 1.4em;
+	border-left-style: none;
+	background-color: #1b60d1;
+	color: white;
+	padding: 4px 21px;
+	border-radius: 0.3em;
+}
+input[type = "submit"]:hover,input[type = "reset"]:hover{
+	background-color:#1366ef ;
+	color: white;
+}
