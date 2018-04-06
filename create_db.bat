@@ -7,7 +7,10 @@ create table user(
 id int unsigned not null auto_increment primary key,
 name verchar(255) not null,
 password verchar(255) not null,
-
+gender verchar(255) not null,
+age int not null,
+e_mail text ,
+update_date timestamp
 
 );
 
@@ -15,7 +18,7 @@ create table bbs(
 
 id int unsigned not null auto_increment primary key,
 name verchar(255) not null foreign key (name) references user(name),
-date datetime not null, 
+date taimestamp not null, 
 title varchar(255) not null,
 content text not null
 
