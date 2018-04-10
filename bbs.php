@@ -56,10 +56,12 @@
     		<meta name = "author" content = "Ishikawa" >
     		<meta name = "keywords" content = "BBS workport Volume2 Task">
     		<meta name = "description" content = "this is bulletin board, which has some simple functions:User Authentication, search words, access management,paging and so on">
-    		<meta name = "icon" src = "">
+        <link rel = "icon" href = "img/favicon.ico">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <meta name="viewport" content="width = device-width,initial-scale = 1.0">
     		<link rel = "stylesheet" type = "text/css" href = "base.css">
     		<script type = "text/javascript" src = "base.js"></script>
-    		<script type = "text/javascript" >
+    		<script type = "text/javascript">
     		</script>
     	</head>
     	<body>
@@ -77,37 +79,37 @@
     		<!-- background-animation -->
 
     		<div id = "login">
-    		    <h1>Bulletin &nbsp;Board</h1>
-    		    <form action = "bbs.php" method = "post">
+  		    <h1>Bulletin &nbsp;Board</h1>
+  		    <form action = "bbs.php" method = "post">
     		    <fieldset>
     		    	<p>ユーザー名  ：<input type = "text" name= "user_name" value = "<?=$user?>" required>
     		    	<p>パスワード  ：<input type = "password" name = "password" value = "" required><br><br>
     		    	<input type = "submit" value = "login">&nbsp;&nbsp;
-    				<input type = "reset" value = "clear">
-    			</fieldset>
-    		    </form>
+    				  <input type = "reset" value = "clear">
+    			  </fieldset>
+  		    </form>
 
-    		<!-- login error report -->
+    	<!-- login error report -->
 			<?php if($login_error){?>
-				<div class = "error">ユーザー名、若しくはパスワードが間違っています。</div>
+				   <div class = "error">ユーザー名、若しくはパスワードが間違っています。</div>
 			<?php }?>
 			<!-- login error report -->
 
     		</div>
-    		<!-- login form -->
+    	<!-- login form -->
 
-            <!-- animation JavaScript -->
+      <!-- animation JavaScript -->
 
 			<script type="text/javascript">
-    			var red = document.getElementsByClassName("red")[0];
-    			var yellow = document.getElementsByClassName("yellow")[0];
-    			var orange = document.getElementsByClassName("orange")[0];
-    			var blue = document.getElementsByClassName("blue")[0];
-    			console.log(red);
-    			animate_ball(red);
-    			animate_ball(yellow);
-    			animate_ball(orange);
-    			animate_ball(blue);
+  			var red = document.getElementsByClassName("red")[0];
+  			var yellow = document.getElementsByClassName("yellow")[0];
+  			var orange = document.getElementsByClassName("orange")[0];
+  			var blue = document.getElementsByClassName("blue")[0];
+  			console.log(red);
+  			animate_ball(red);
+  			animate_ball(yellow);
+  			animate_ball(orange);
+  			animate_ball(blue);
 			</script>
 
 			<!-- animation JavaScript -->
@@ -145,7 +147,7 @@
 				<form action = "bbs.php" method = "post">
 					<fieldset>
 						<legend>投稿フォーム</legend>
-						<p>投稿者<?= $name ?>
+						  <p>投稿者<?= $name ?>
     					<input type = "hidden"  name = "name" value = <?= $name?>>
     					<input type = "hidden" name = "date" value = "">
     					<p>タイトル： <input type = "text"  name = "title" value = "" required>
