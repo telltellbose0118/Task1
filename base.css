@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@@font-face {
+	font-family: 'charcoal';
+	src:url(fonts/Charcoal.otf);
+}
 header {
 	text-align: right;
 	background-color: #bec8d8;
@@ -9,17 +13,26 @@ div #login{
 }
 body{
 	text-align:center;
+	margin: 0;
+	padding: 0;
 }
 div .error{
-	color:red;x
+	color:red;
 }
 div.ball{
 	position:absolute;
 	z-index:-1;
 }
+div.ball::before{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+}
 div.red{
 	top: 75px;
-	left: 75px;
+	left: 22%;
 	width: 180px;
 	height: 180px;
 	border-radius: 90px;
@@ -27,7 +40,7 @@ div.red{
 }
 div.yellow{
 	top: 400px;
-	left: 200px;
+	left: 20%;
 	width: 140px;
 	height: 140px;
 	border-radius: 70px;
@@ -35,7 +48,7 @@ div.yellow{
 }
 div.orange{
 	top: 400px;
-	left: 600px;
+	left: 60%;
 	width: 80px;
 	height: 80px;
 	border-radius: 40px;
@@ -43,7 +56,7 @@ div.orange{
 }
 div.blue{
 	top: 100px;
-	left: 650px;
+	left: 65%;
 	width: 150px;
 	height: 150px;
 	border-radius: 75px;
@@ -55,16 +68,23 @@ div#login h1{
 	width: 485px;
 	height: 75px;
 	font-size: 3.5rem;
+	font-family: charcoal;
 }
 div#login form{
 	margin:25px auto;
 	padding-top: 10px;
 }
 div#login fieldset{
-	width:	350px;
+	width: 30%;
+	max-width: 400px;
+	min-width: 300px;
 	height: 150px;
 	margin: 25px auto;
 	background-color:rgba(255,255,255,0.5);
+}
+div#login fieldset p{
+	font-size: 1rem;
+	font-style: oblique;
 }
 input[type = "text"],input[type = "password"]{
 	font-weight:bold;

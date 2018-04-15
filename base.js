@@ -7,36 +7,33 @@ function getBall(index){
 	return object;
 }
 
-function animate_ball(object,ma,mi,){
+function animate_ball(object,v,a){
 
 	var obj = object;
 	var ticks = 0;
-	var velocity = 0;
+	var velocity = v;
 	var acceleration = 0;
+	var ac = a;
 	var position_y = 0;
-	var std_y = window.pageYOffset + obj.getClientRects().top;
-	var std_x = window.pageXOffset + obj.getClientRects().left;
+	var std_y = window.pageYOffset + obj.getClientRects()[0].top;
+	var std_x = window.pageXOffset + obj.getClientRects()[0].left;
 	var y = 0;
-	var max_y = ma;
-	var min_y = mi < 0? mi : -mi;
-
 	obj.style.position = "absolute";
 
 	animate();
 
 	function animate(){
 
-		timer += 1;
-		acceleration = y >= 0 ? -2 : 2;
-		velocity += acceleration;
-		y += 0.5 * acceleration + velocity;
-		obj.style.top = std_y + y + "px";
+		ticks += 1;
 
+			acceleration = y >= 0 ? -ac:ac;
+			velocity += acceleration;
+			y += 0.5 * acceleration + velocity;
+			obj.style.top = std_y + y + "px";
 		requestAnimationFrame(animate);
 	}
 }
-
-window.addEventListener("DOMContentLoaded",animate_ball(getObject(0),50,50),false);
-window.addEventListener("DOMContentLoaded",animate_ball(getObject(1),50,50),false);
-window.addEventListener("DOMContentLoaded",animate_ball(getObject(2),50,50),false);
-window.addEventListener("DOMContentLoaded",animate_ball(getObject(3),50,50),false);
+animate_ball(getBall(0),7,0.2);
+animate_ball(getBall(1),6,0.1);
+animate_ball(getBall(2),7,0.1);
+animate_ball(getBall(3),8,0.2);

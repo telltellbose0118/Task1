@@ -60,7 +60,6 @@
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
         <meta name="viewport" content="width = device-width,initial-scale = 1.0">
     		<link rel = "stylesheet" type = "text/css" href = "base.css">
-    		<script type = "text/javascript" src = "base.js"></script>
     		<script type = "text/javascript">
     		</script>
     	</head>
@@ -88,7 +87,6 @@
     				  <input type = "reset" value = "clear">
     			  </fieldset>
   		    </form>
-
     	<!-- login error report -->
 			<?php if($login_error){?>
 				   <div class = "error">ユーザー名、若しくはパスワードが間違っています。</div>
@@ -100,17 +98,7 @@
 
       <!-- animation JavaScript -->
 
-			<script type="text/javascript">
-  			var red = document.getElementsByClassName("red")[0];
-  			var yellow = document.getElementsByClassName("yellow")[0];
-  			var orange = document.getElementsByClassName("orange")[0];
-  			var blue = document.getElementsByClassName("blue")[0];
-  			console.log(red);
-  			animate_ball(red);
-  			animate_ball(yellow);
-  			animate_ball(orange);
-  			animate_ball(blue);
-			</script>
+			<script type = "text/javascript" src = "base.js"></script>
 
 			<!-- animation JavaScript -->
 
